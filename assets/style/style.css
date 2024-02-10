@@ -1,0 +1,156 @@
+:root {
+  --main: #1a69bd;
+  --sec: #2ecbf0;
+  --third: #e39c4a;
+  --foruth: #050a14;
+}
+
+@font-face {
+  font-family: ops;
+  src: url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@400..700&family=Honk&family=Pacifico&family=Rubik+Glitch+Pop&family=Workbench&display=swap");
+}
+
+html,
+body {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+body {
+  padding-right: 0 !important;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.main-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.main-title,
+.font-change {
+  color: transparent;
+  background: linear-gradient(90deg, var(--sec), var(--third));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: "Black Ops One";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.almtwr {
+  color: var(--third) !important;
+}
+
+.legan {
+  background: linear-gradient(180deg, var(--main), var(--foruth));
+}
+
+.card-group {
+  gap: 25px;
+}
+
+.beso {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.blue {
+  color: #049ada;
+}
+
+.red {
+  color: #e71e07;
+}
+
+.yellow {
+  color: #fcd000;
+}
+
+.green {
+  color: #42b132;
+}
+.layertop {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, var(--main), var(--third));
+  z-index: 55555555555555555555555;
+  animation: 2s top;
+  animation-fill-mode: forwards;
+}
+
+.layerbtm {
+  position: fixed;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(90deg, var(--main), var(--third));
+  z-index: 55555555555555555555555;
+  animation: 2s bottom;
+  animation-fill-mode: forwards;
+}
+
+.loading {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: 10px solid;
+  border-color: var(--sec) var(--third) var(--sec) var(--third);
+  border-radius: 50%;
+  z-index: 55555555555555555555555;
+  animation: 2s load infinite, 2s load2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top {
+  form {
+    top: 50%;
+  }
+  to {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom {
+  form {
+    bottom: 50%;
+  }
+  to {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes load {
+  form {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes load2 {
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
